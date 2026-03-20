@@ -1,0 +1,137 @@
+/* RESET */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* NAVBAR (Flexbox) */
+header nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+/* HERO SECTION */
+main section [aria-labelledby="hero-title"] {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+}
+
+main section [aria-labelledby="hero-title"] h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+main section [aria-labelledby="hero-title"] p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+main section [aria-labelledby="hero-title"] a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Product GRID (Grid) */
+[aria-label="Product highlights"] {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+[aria-label="Product highlights"] article {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+[aria-label="Product highlights"] article div [role="img"] {
+    background-color: #ccc;
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+footer section {
+    min-width: 150px;
+}
+
+footer h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer ul {
+    list-style: none;
+}
+
+/* RESPONSIVE MEDIA QUERY- REQUIRED */
+@media (max-width: 1024px) {
+    [aria-lable="Product highlights"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+     
+@media (max-width: 768px) {
+    header nav  {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav a {
+        margin: 5px 0;
+   }
+
+    [aria-lable="Product highlights"] {
+         grid-template-columns: 1fr;
+    }
+
+    main section [aria-labelledby="hero-title"] {
+        padding: 50px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
